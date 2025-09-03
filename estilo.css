@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primaria: #28a745; 
+    --secundaria: #6c757d;
+    --fundo: #f4f7f6; 
+    --fundo-cartao: #ffffff; 
+    --texto: #333333; 
+    --borda: #dddddd; 
+    --sombra: rgba(0, 0, 0, 0.1); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--fundo-cartao);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--sombra);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+h1 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: var(--primaria);
+}
+
+#formulario label {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#formulario input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type=text]::-webkit-inner-spin-button,
+input[type=text]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#formulario input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primaria);
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+}
+
+.botao-grupo {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+.botao-grupo input[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-grupo input:hover {
+    transform: translateY(-2px); 
+    filter: brightness(1.1); 
+}
+
+.primario {
+    background-color: var(--primaria);
+}
+
+.secundario {
+    background-color: var(--secundaria);
+}
+
+#resultados-container p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--primaria);
+}
+
+#resultados-container p:empty {
+    display: none;
+}

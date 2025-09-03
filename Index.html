@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Calculadora IRPF</title>
+</head>
+<body>
+    <div class="container">
+
+        <div id="titulo">
+        <h1>Calculadora IRPF</h1>
+        </div>
+
+        <div id="formulario">
+            <label for="salario">Salario Mensal:</label>
+            <input type="text" id="salario" name="salario" placeholder="Ex: 3500.50" required>
+            <div class="botao-grupo">
+            <input type="button" value="Limpar" class="secundario" onclick="Limpar()">
+            <input type="button" value="Calcular IRPF" class="primario" onclick="Calcular()">
+            </div>          
+        </div>
+
+        <div id="resultados-container">
+            <p id="resultado"></p>
+            <p id="aliquota"></p>
+        </div>
+    </div>
+
+<script src="funcao.js"></script>
+</body>
+</html>
