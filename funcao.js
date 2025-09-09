@@ -29,13 +29,19 @@ function Calcular(){
     const salario = parseFloat(salarioStr);
     const ir = calcularIR(salario);
     const aliquota = porcentageAliquota(salario, ir);
-
+    if (ir === 0) {
+        document.getElementById("salarioLiquido").innerHTML = "Isento de Imposto de Renda.";
+        document.getElementById("resultado").innerHTML = "";
+    }{
+    document.getElementById("salarioLiquido").innerHTML = "O salário líquido é: R$ " + (salario - ir).toFixed(2);
     document.getElementById("resultado").innerHTML = "O valor do IR é: R$ " + ir.toFixed(2);
     document.getElementById("aliquota").innerHTML = "A alíquota efetiva é: " + aliquota.toFixed(2) + "%";
+    }
 }
 
 function Limpar(){
     document.getElementById("salario").value = "";
     document.getElementById("resultado").innerHTML = "";
     document.getElementById("aliquota").innerHTML = "";
+    document.getElementById("salarioLiquido").innerHTML = "";
 }
